@@ -1,10 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-hey
-<div style="height: 300px;"
-leaflet
-[leafletOptions]="options"
-[leafletLayersControl]="layersControl">
-</div>
+
+  <div class="card">
+
+    <div class="card-body">
+
+      <div class="row">
+
+        <!-- Map -->
+        <div class="col-sm-12">
+
+          <div leaflet style="height: 400px;"
+               leafletDraw
+               [leafletOptions]="options"
+               [leafletDrawOptions]="drawOptions"
+               (leafletDrawCreated)="onDrawCreated($event)"
+               (leafletDrawStart)="onDrawStart($event)">
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
 
 </div>
